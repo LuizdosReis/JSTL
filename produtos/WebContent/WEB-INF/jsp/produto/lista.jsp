@@ -37,9 +37,13 @@
 			<tr id="produto${produto.id}">
 				<td>${st.count}</td>
 				<td>${ p.nome.toUpperCase()}</td>
-				<td>${p.preco}</td>
+				<td>
+					<fmt:formatNumber value="${p.preco}" type="currency"/> 
+				</td>
 				<td>${p.descricao}</td>
-				<td>${p.dataInicioVenda.time}</td>
+				<td>
+					<fmt:formatDate value="${p.dataInicioVenda.time}" pattern="EEEE, dd 'de' MMMM 'de' yyyy"/> 
+				</td>
 				<c:choose>
 					<c:when test="${p.usado}">
 						<td>Sim</td>
