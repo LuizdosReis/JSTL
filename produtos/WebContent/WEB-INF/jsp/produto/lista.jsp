@@ -20,6 +20,7 @@
 		}
 	</script>
 
+	<h2><fmt:message key="mensagem.bemvindo" /></h2>
 	<h1>Produtos</h1>
 	<div id="mensagem"></div>
 	<table width="100%">
@@ -56,7 +57,7 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<a href="<c:url value = "/produto/formulario"/>">Adicionar um produto</a>
+	<a href="<c:url value = "/produto/formulario"/>"><fmt:message key="mensagem.novoProduto"/></a>
 	<c:set var="nome" value="João da Silva" />
 	<c:out value="${nome}" />
 </body>
